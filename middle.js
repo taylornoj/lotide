@@ -15,7 +15,21 @@ const assertArraysEqual = function(array1, array2) {
   } else console.log(`❌Assertion Failed: ${array1}} !== ${array2}`);
 };
 
-const middle = function(array) {
-  return 
 
+const middle = function(array) {
+  let middleElement = [];
+  if (array.length < 3) {
+    return middleElement;
+  } else if (array.length % 2 !== 0) {
+    middleElement.push(array[Math.floor(array.length / 2)]);
+  } else if (array.length > 3) {
+    middleElement.push(array[Math.floor((array.length - 1) / 2)]);
+    middleElement.push(array[Math.floor(array.length / 2)]);
+ } return middleElement;
 }
+
+console.log(middle([1])); // []
+console.log(middle([1, 2])); // []
+console.log(middle([1, 2, 3])); // [2]
+console.log(middle([1, 2, 3, 4])); // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5])); // [3, 4]
