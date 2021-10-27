@@ -20,6 +20,3 @@ const without = function(source, itemsToRemove) {
   let newArray = source.filter((without) => !itemsToRemove.includes(without));
   return newArray;
 };
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
