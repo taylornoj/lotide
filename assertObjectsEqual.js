@@ -4,6 +4,16 @@
 //     console.log(`✅Assertion Passed: ${array1} === ${array2}`);
 //   } else console.log(`❌Assertion Failed: ${array1}} !== ${array2}`);
 // };
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  } for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const eqObjects = function(object1, object2) {
   let obj1 = Object.keys(object1);
@@ -25,9 +35,18 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
-  // Implement me!
+  if (eqObjects(actual, expected)) {
+    return console.log(`✅Assertion Passed: ${actual} === ${expected}`);
+  } else
+  return console.log(`❌Assertion Failed: ${actual}} !== ${expected}`);
 };
-console.log(`Example label: ${inspect(actual)}`);
 
-      console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-      console.log(`❌Assertion Failed: ${actual}} !== ${expected}`);
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+assertObjectsEqual(cd, dc);
+
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// assertEqual(eqObjects(cd, cd2), false);
+      
+    
