@@ -10,11 +10,14 @@ const assertEqual = function(actual, expected) {
 const eqObjects = function(object1, object2) {
   let obj1 = Object.keys(object1)
   let obj2 = Object.keys(object2)
-  if (obj1.length !== obj2.length) {
+  if (obj1.length !== obj2.length) { // checking length
     return false;
-  }
-
-    
+  } else {
+    for (const key of obj1) { 
+      if (object1[key] !== object2[key]) { //comparing object values
+      } return false;
+    }
+  } return true;
 };
 
 const ab = { a: "1", b: "2" };
