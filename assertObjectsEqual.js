@@ -1,9 +1,3 @@
-
-// const assertArraysEqual = function(array1, array2) {
-//   if (eqArrays(array1, array2) === true) {
-//     console.log(`✅Assertion Passed: ${array1} === ${array2}`);
-//   } else console.log(`❌Assertion Failed: ${array1}} !== ${array2}`);
-// };
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -46,7 +40,7 @@ const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 assertObjectsEqual(cd, dc);
 
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false);
+ const cd2 = { c: "1", d: ["2", 3, 4] };
+ assertObjectsEqual(cd, cd2)
       
     
