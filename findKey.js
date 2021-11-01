@@ -11,7 +11,7 @@ const findKey = (object, callback) => {
     if (callback(object[key])) {
       return key;
     }
-  } 
+  }
   return undefined;
 };
 
