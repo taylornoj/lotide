@@ -1,5 +1,3 @@
-
-
 const middle = function (array) {
   let middleNum = [];
   let index = Math.floor(array.length / 2);
@@ -14,6 +12,7 @@ const middle = function (array) {
   return middleNum;
 };
 
+module.exports = middle;
 
 // const eqArrays = function(array1, array2) {
 //   if (array1.length !== array2.length) {
@@ -33,11 +32,11 @@ const middle = function (array) {
 // };
 
 
-console.log(middle([1])); // []
-console.log(middle([1, 2])); // []
-console.log(middle([1, 2, 3])); // [2]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // [3, 4]
+// console.log(middle([1])); // []
+// console.log(middle([1, 2])); // []
+// console.log(middle([1, 2, 3])); // [2]
+// console.log(middle([1, 2, 3, 4])); // => [2, 3]
+// console.log(middle([1, 2, 3, 4, 5, 6])); // [3, 4]
 
 
 // assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
